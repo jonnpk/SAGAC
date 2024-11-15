@@ -49,5 +49,13 @@ video {
     width: 100%;
 }
 
+.section-title-img{
+    width: 693px;
+}
+
+.section-title-img.weare {
+    background-image: url(/source/img/title_weare.svg);
+}
+
 
 
