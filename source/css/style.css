@@ -1,9 +1,53 @@
-section{
+section {
     padding: 0 32px;
 }
 
-.section-container{
+.section-container {
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+header {
+    padding: 16px 32px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 99;
+}
+
+.logo-main,
+.logo-main > svg {
+    width: 150px;
+}
+
+.hamburger {
+    display: block;
+}
+
+.hamburger,
+.hamburger > svg {
+    width: 40px;
+}
+
+#intro-section {
+    background-color: #000002;
+    height: 100vh;
+}
+
+.video-area {
+    max-width: 650px;
+}
+
+video {
+    width: 100%;
+}
+
+
+

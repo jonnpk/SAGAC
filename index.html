@@ -12,21 +12,35 @@
 <body>
     <header>
         <h1>
-            <a href="#" class="logo-classic">
+            <a href="#" class="logo-main">
                 <?xml version="1.0" encoding="utf-8"?>
                 <!-- Generator: Adobe Illustrator 27.4.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                     y="0px" viewBox="0 0 418.81 115.14" style="enable-background:new 0 0 418.81 115.14;"
                     xml:space="preserve">
                     <style type="text/css">
-                        .st0 {
+                        rect.background {
+                            fill: transparent;
+                        }
+                        
+                        .logo-main-0 {
                             display: none;
                         }
 
-                        .st1 {
+                        .logo-main-1 {
                             display: inline;
                         }
+
+                        g path {
+                            fill: white;
+                            transition: fill 0.3s;
+                        }
+
+                        svg:hover g path {
+                            fill: #818181;
+                        }
                     </style>
+                    <rect class="background" x="0" y="0" width="100%" height="100%"></rect>
                     <g id="layer_1">
                         <g>
                             <path d="M115.14,50.49V0H64.65l-7.08,7.08L50.49,0H0v50.49l7.08,7.08L0,64.65v50.49h50.49l7.08-7.08l7.08,7.08h50.49V64.65
@@ -97,8 +111,8 @@
                             </g>
                         </g>
                     </g>
-                    <g id="layer_2" class="st0">
-                        <g class="st1">
+                    <g id="layer_2" class="logo-main-0">
+                        <g class="logo-main-1">
                             <path d="M346.86-44.65V-168H223.51l-17.31,17.31L188.89-168H65.54v123.35l17.31,17.31L65.54-10.03v123.35h123.35l17.31-17.31
 			l17.31,17.31h123.35V-10.03l-17.31-17.31L346.86-44.65z M298.53,64.99H113.87v-184.66h184.66V64.99z" />
                             <g>
@@ -174,8 +188,17 @@
         </h1>
         <a href="#" class="hamburger">
             <svg width="51" height="34" viewBox="0 0 51 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0H50.25V5.58333H0V0ZM0 13.9583H50.25V19.5417H0V13.9583ZM0 27.9167H50.25V33.5H0V27.9167Z"
-                    fill="white" />
+                <style>
+                    path {
+                        fill: white;
+                        transition: fill 0.3s;
+                    }
+
+                    svg:hover path {
+                        fill: #818181;
+                    }
+                </style>
+                <path d="M0 0H50.25V5.58333H0V0ZM0 13.9583H50.25V19.5417H0V13.9583ZM0 27.9167H50.25V33.5H0V27.9167Z" />
             </svg>
         </a>
     </header>
@@ -188,7 +211,8 @@
             </div>
             <div class="flowing-text-area">
                 <span class="flowing-text">
-                    ART BELONGS TO EVERYONE · ART BELONGS TO EVERYONE · ART BELONGS TO EVERYONE · ART BELONGS TO EVERYONE · 
+                    ART BELONGS TO EVERYONE · ART BELONGS TO EVERYONE · ART BELONGS TO EVERYONE · ART BELONGS TO
+                    EVERYONE ·
                 </span>
             </div>
         </div>
@@ -199,79 +223,213 @@
         <section id="weare-section">
             <div class="section-container">
                 <div class="pursue-area">
-                    <div class="pursue-circle"></div>
-                    <h2 class="pursue-catchphrase"></h2>
-                    <p class="pursue-introduce"></p>
+                    <ul class="pursue-circle-box">
+                        <li class="pursue-circle">
+                            <p>Sensitive</p>
+                        </li>
+                        <li class="pursue-circle">
+                            <p>Creative</p>
+                        </li>
+                        <li class="pursue-circle">
+                            <p>Balanced</p>
+                        </li>
+                    </ul>
+                    <h2 class="pursue-catchphrase">'예술은 모두의 것'</h2>
+                    <p class="pursue-introduce">
+                        '아트팀 사각'은 2018년을 시작으로 창작 및 예술 활동 등, 지속적인 전시를 통해 시대에 맞는 메시지를 전합니다.
+                        예술을 사랑한다면 나이, 전공, 직업 등 상관없이 지원 가능하며, 매년 새로운 기수들과 호흡을 맞춰나가고 있습니다.
+                    </p>
                 </div>
             </div>
         </section>
+
 
         <section id="value-section">
             <div class="section-container">
                 <ul class="value-area">
                     <li class="value-contents">
-                        <figure class="learning"></figure>
+                        <figure class="value-img learning"></figure>
                         <div class="value-article">
                             <div class="value-article-title">
-                                <h2></h2>
-                                <p></p>
+                                <h2>Learning</h2>
+                                <p>Art has no limits in learning</p>
                             </div>
-                            <p class="value-article-text"></p>
+                            <p class="value-article-text">
+                                나이, 전공, 직업과 무관하게, 모든 멤버들이
+                                예술에 대한 깊이를 더하고 서로에게서 배울 수 있도록
+                                개방적인 환경을 제공합니다.
+                            </p>
                         </div>
                     </li>
                     <li class="value-contents">
-                        <figure class="growth"></figure>
+                        <figure class="value-img growth"></figure>
                         <div class="value-article">
                             <div class="value-article-title">
-                                <h2></h2>
-                                <p></p>
+                                <h2>Growth</h2>
+                                <p>Art as a path of continuous growth</p>
                             </div>
-                            <p class="value-article-text"></p>
+                            <p class="value-article-text">
+                                사각은 모든 멤버들이 예술을 통해
+                                스스로 성장하고 변화할 수 있는 기회를 제공합니다.
+                                새로운 경험과 도전을 통해
+                                예술적 역량을 끊임없이 확장해 나갑니다.
+                            </p>
                         </div>
                     </li>
                     <li class="value-contents">
-                        <figure class="experience"></figure>
+                        <figure class="value-img experience"></figure>
                         <div class="value-article">
                             <div class="value-article-title">
-                                <h2></h2>
-                                <p></p>
+                                <h2>Experience</h2>
+                                <p>Shared experiences, Lasting impact</p>
                             </div>
-                            <p class="value-article-text"></p>
+                            <p class="value-article-text">
+                                팀원들과 함께 창작과 전시 경험을 쌓아가며,
+                                예술을 사랑하는 사람이라면 누구나 참여하고
+                                즐길 수 있는 지속적인 기회를 제공합니다.
+                            </p>
                         </div>
                     </li>
                 </ul>
             </div>
         </section>
 
+
         <section id="practice-section">
             <div class="article-container">
                 <article class="painting-box">
                     <figure>
-                        <h2 class="painting-text"></h2>
+                        <h2>
+                            색과 형태를 통해 감정, 생각,
+                            주제의식을 시각적으로 표현합니다.
+                        </h2>
                     </figure>
                 </article>
                 <article class="sculpture">
                     <figure>
-                        <h2 class="sculpture-text"></h2>
+                        <h2>
+                            입체적 형상과 공간을 활용하여
+                            메시지를 전달하고 이야기를 담아냅니다.
+                        </h2>
                     </figure>
                 </article>
                 <article class="fashion">
                     <figure>
-                        <h2 class="fashion-text"></h2>
+                        <h2>
+                            옷을 매개로 특정 메시지를 전달하는
+                            작품으로서의 패션을 만듭니다.
+                        </h2>
                     </figure>
                 </article>
                 <article class="digitalart">
                     <figure>
-                        <h2 class="digitalart-text"></h2>
+                        <h2>
+                            디지털 기술을 활용해 창작의 가능성을 확장하고
+                            새로운 시각적 경험을 제공합니다.
+                        </h2>
                     </figure>
                 </article>
             </div>
         </section>
 
+
         <section id="output-section">
             <div class="section-container">
                 <div class="output-area">
-                    <div class="count-area"></div>
+                    <ul class="count-ar ea">
+                        <li class="count-content">
+                            <div class="count-type">
+                                <figure class="count-img">
+                                    <img src="source/img/icon/output_artist.svg" alt="artist">
+                                </figure>
+                                <h2>Artist</h2>
+                                <p>배출 작가</p>
+                            </div>
+                            <div class="count-circle">
+                                <p class="count-number"></p>
+                            </div>
+                        </li>
+                        <li class="count-content">
+                            <div class="count-type">
+                                <figure class="count-img">
+                                    <img src="source/img/icon/output_artwork.svg" alt="artwork">
+                                </figure>
+                                <h2>Artwork</h2>
+                                <p>누적 작품 수</p>
+                            </div>
+                            <div class="count-circle">
+                                <p class="count-number"></p>
+                            </div>
+                        </li>
+                        <li class="count-content">
+                            <div class="count-type">
+                                <figure class="count-img">
+                                    <img src="source/img/icon/output_visitor.svg" alt="visitor">
+                                </figure>
+                                <h2>Visitor</h2>
+                                <p>누적 관람객</p>
+                            </div>
+                            <div class="count-circle">
+                                <p class="count-number"></p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="output-carousel">
+                        <div class="carousel-contents">
+                            <figure></figure>
+                            <p></p>
+                        </div>
+                        <div class="carousel-contents">
+                            <figure></figure>
+                            <p></p>
+                        </div>
+                        <div class="carousel-contents">
+                            <figure></figure>
+                            <p></p>
+                        </div>
+                        <div class="carousel-contents">
+                            <figure></figure>
+                            <p></p>
+                        </div>
+                        <div class="carousel-contents">
+                            <figure></figure>
+                            <p></p>
+                        </div>
+                        <div class="carousel-contents">
+                            <figure></figure>
+                            <p></p>
+                        </div>
+                        <div class="carousel-contents">
+                            <figure></figure>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="end-section">
+            <div class="section-container">
+                <div class="end-logo">
+                    <figure class="end-logo-rectangle">
+                        <div class="interactive-text-area"></div>
+                    </figure>
+                    <figure class="end-logo-text"></figure>
+                </div>
+                <div class="contact">
+                    <h2>CONTACT</h2>
+                    <div class="address">
+                        <p>Instagram | @artsagac.official</p>
+                        <p>Buissness Mail | sagacartteam@gmail.com</p>
+                    </div>
+                    <p>&copy; 2024. SAGAC. All Rights Reserved.</p>
+                </div>
+                <div class="flowing-text-area">
+                    <span class="flowing-text">
+                        ART BELONGS TO EVERYONE · ART BELONGS TO EVERYONE · ART BELONGS TO EVERYONE · ART BELONGS TO
+                        EVERYONE ·
+                    </span>
                 </div>
             </div>
         </section>
