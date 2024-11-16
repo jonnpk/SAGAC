@@ -1,5 +1,7 @@
+@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+
 section {
-    padding: 0 32px;
+    padding: 80px 32px;
 }
 
 .section-container {
@@ -39,23 +41,144 @@ header {
 #intro-section {
     background-color: #000002;
     height: 100vh;
+    box-sizing: border-box;
 }
 
 .video-area {
-    max-width: 650px;
+    max-width: 600px;
 }
 
 video {
     width: 100%;
 }
 
-.section-title-img{
-    width: 693px;
+.section-title {
+    width: 100%;
 }
 
-.section-title-img.weare {
-    background-image: url(/source/img/title_weare.svg);
+.section-title.weare {
+    margin-bottom: 130px;
 }
+
+.section-title.value {
+    margin-bottom: 190px;
+}
+
+.section-title-img {
+    width: 693px;
+    height: 74px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.section-title.weare .section-title-img {
+    background-image: url(../img/title_weare.svg);
+}
+
+.section-title.value .section-title-img {
+    background-image: url(../img/title_value.svg);
+}
+
+.section-title.practice .section-title-img {
+    background-image: url(../img/title_practice.svg);
+}
+
+.section-title.output .section-title-img {
+    background-image: url(../img/title_output.svg);
+}
+
+.pursue-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 97px;
+}
+
+.pursue-circle-box {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 360px;
+}
+
+.pursue-circle {
+    width: 360px;
+    height: 360px;
+    border: 3px solid #151515;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.pursue-circle:nth-child(1) {
+    transform: translateX(-300px);
+}
+
+.pursue-circle:nth-child(2) {
+    transform: translateX(0);
+}
+
+.pursue-circle:nth-child(3) {
+    transform: translateX(300px);
+}
+
+.pursue-circle p {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.pursue-introduce{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.pursue-introduce h2 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.pursue-introduce p {
+    font-size: 20px;
+    text-align: center;
+    line-height: 26px;
+}
+
+.value-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 180px;
+}
+
+.value-contents {
+    display: flex;
+    gap: 120px;
+}
+
+.value-img {
+    width: 100%;
+    max-width: 60%;
+    height: 609px;
+    background-size: cover;
+    background-repeat: none;
+}
+
+.value-img.learning {
+    background-image: url(../img/value1.jpg);
+}
+
+
+
+
+
+
+
 
 
 
