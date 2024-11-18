@@ -1,7 +1,19 @@
 @import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
 
-section {
+#intro-section {
+    background-color: #000002;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+#weare-section {
     padding: 80px 32px;
+}
+
+#value-section,
+#practice-section,
+#output-section {
+    padding: 150px 32px;
 }
 
 .section-container {
@@ -38,12 +50,6 @@ header {
     width: 40px;
 }
 
-#intro-section {
-    background-color: #000002;
-    height: 100vh;
-    box-sizing: border-box;
-}
-
 .video-area {
     max-width: 600px;
 }
@@ -60,7 +66,8 @@ video {
     margin-bottom: 130px;
 }
 
-.section-title.value {
+.section-title.value,
+.section-title.practice {
     margin-bottom: 190px;
 }
 
@@ -140,11 +147,12 @@ video {
 
 .pursue-introduce h2 {
     font-size: 32px;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 .pursue-introduce p {
     font-size: 20px;
+    font-weight: 600;
     text-align: center;
     line-height: 26px;
 }
@@ -158,21 +166,113 @@ video {
 
 .value-contents {
     display: flex;
-    gap: 120px;
+    align-items: center;
+    gap: 110px;
+    width: 100%;
+}
+
+.value-contents.growth {
+    justify-content: flex-end;
 }
 
 .value-img {
     width: 100%;
     max-width: 60%;
-    height: 609px;
+    aspect-ratio: 1120 / 609;
+    height: auto;
     background-size: cover;
     background-repeat: none;
+    background-position: center;
 }
 
 .value-img.learning {
     background-image: url(../img/value1.jpg);
 }
 
+.value-img.growth {
+    background-image: url(../img/value2.jpg);
+}
+
+.value-img.experience {
+    background-image: url(../img/value3.jpg);
+}
+
+.value-article {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.value-article-title{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.value-article-title h2 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.value-article-title p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.value-article-text {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+}
+
+.value-article-title.growth,
+.value-article-text.growth {
+    text-align: right;
+}
+
+.practice-area {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    column-gap: 2%;
+    row-gap: 32px;
+}
+
+.practice-area article {
+    flex: 1 1 48%;
+    max-width: 918px;
+    height: auto;
+}
+
+.practice-area figure {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 918 / 596;
+    position: relative;
+    display: block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.practice-area video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.practice-area h2 {
+    display: none;
+}
+
+.painting figure {
+    background-image: url(../img/prac-painting.jpg);
+}
+
+.sculpture figure {
+    background-image: url(../img/prac_sculpture.jpg);
+}
 
 
 
