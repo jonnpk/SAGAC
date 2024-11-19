@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      height: 10000px;
+    }
+
+    .active {
+      background: #fff;
+    }
+
+    .web-header {
+      position: fixed;
+      top: 0;
+      z-index: 99;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 68px;
+      border-bottom: 1px solid #ffffff80;
+      padding: 0 50px;
+      transition: 0.5s;
+      /* background: (rgba(0, 0, 0, 0.0)68px, #fff 245px); */
+      background: #000;
+    }
+
+    .web-header.active {
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .header-main-menu {
+      color: #ffffff80;
+    }
+
+    .header-main-menu.on,
+    .web-header:hover .header-main-menu,
+    .web-header:hover select {
+      color: #000;
+    }
+
+    .select.on2 {
+      color: #000;
+    }
+
+    .header-img-wrap {
+      position: relative;
+      width: 280px;
+    }
+
+    .web-header:hover {
+      background: #fff;
+    }
+
+    .web-header:hover .hover-logo {
+      display: block;
+    }
+
+    .m-header-logo {
+      width: 150px;
+    }
+
+    .w-logo-img {
+      width: 150px;
+      height: 30px;
+      position: absolute;
+      top: -15px;
+    }
+
+    .hover-logo {
+      display: none;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="web-header">
+      <div class="header-img-wrap">
+        <h1>
+          <a href="#">
+            <img class="w-logo-img white-logo" src="./white-logo.png" alt="로고이미지">
+            <img class="w-logo-img hover-logo" src="./header-logo.png" alt="로고이미지">
+          </a>
+        </h1>
+      </div>
+
+      <ul class="nav">
+        <li class="main-nav first">
+          <span>
+            <a class="header-main-menu" href="#">
+              개인
+            </a>
+          </span>
+        </li>
+        <li class="main-nav second">
+          <span>
+            <a class="header-main-menu" href="#">
+              비즈니스
+            </a>
+          </span>
+        </li>
+        <li>
+          <span>
+            <a class="header-main-menu" href="#">
+              개발
+            </a>
+          </span>
+        </li>
+        <li>
+          <span>
+            <a class="header-main-menu" href="#">
+              고객센터
+            </a>
+          </span>
+        </li>
+      </ul>
+
+      <div class="sign-up_sign-in">
+        <div class="lan">
+          <!-- <img src="./images/lan.png" alt="다국어"> -->
+          <select class="select" name="다국어">
+            <option value="한국어" selected>한국어</option>
+            <option value="일본어">日本語</option>
+            <option value="영어">English</option>
+          </select>
+        </div>
+        <a class="sign in">
+          로그인
+        </a>
+        <a class="sign up">
+          가입하기
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <script>
+    window.addEventListener("scroll", scroll);
+
+    const scrollHeader = document.querySelector(".web-header");
+    const headerMenu = document.getElementsByClassName("header-main-menu");
+
+    function scroll() {
+      let top = window.scrollY;
+      let select = document.querySelector(".select");
+
+      console.log(select)
+      console.log(top);
+      if (top >= 68) {
+        scrollHeader.classList.add("active");
+        document.querySelector(".white-logo").src = "./header-logo.png";
+        select.classList.add("on2");
+      } else {
+        scrollHeader.classList.remove("active");
+        document.querySelector(".white-logo").src = "./white-logo.png";
+        select.classList.remove("on2");
+      }
+
+      
+    }
+  </script>
+</body>
+
+</html>

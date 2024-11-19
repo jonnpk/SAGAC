@@ -1,9 +1,35 @@
 @import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
 
+body {
+    overflow: hidden;
+}
+
+#wrap {
+    transform: translateY(100vh);
+}
+
 #intro-section {
     background-color: #000002;
     height: 100vh;
     box-sizing: border-box;
+    overflow: hidden;
+    /* position: fixed; */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.scrolled #intro-section{
+    transform: translateY(-100%);
+}
+
+.scroll-disabled {
+    overflow-y: hidden;
+}
+
+.scroll-enabled {
+    overflow-y: auto;
 }
 
 #weare-section {
@@ -37,6 +63,10 @@ header {
     z-index: 99;
 }
 
+header.scrolled .main-logo-path {
+    background-color: #151515
+}
+
 .logo-main,
 .logo-main > svg {
     width: 150px;
@@ -51,12 +81,21 @@ header {
     width: 40px;
 }
 
-.video-area {
-    max-width: 600px;
+.intro-video-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+    height: 100vh;
+    overflow: hidden;
 }
 
-video {
-    width: 100%;
+.intro-video {
+    width: 60vw;
+    max-width: 800px;
+    height: auto;
+    max-height: 800px;
+    object-fit: contain;
 }
 
 .section-title {
@@ -169,7 +208,7 @@ video {
 .value-contents {
     display: flex;
     align-items: center;
-    gap: 110px;
+    gap: 120px;
     width: 100%;
 }
 
@@ -286,7 +325,7 @@ video {
 .count-area {
     display: flex;
     justify-content: center;
-    gap: clamp(16px, 5vw, 90px);
+    gap: clamp(16px, 10vw, 100px);
 }
 
 .count-content {
@@ -339,17 +378,31 @@ video {
 
 .output-carousel {
     width: 100%;
-    height: 300px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.carousel-content {
+    width: 580px;
+    height: 580px;
+    background-color: #151515;
 }
 
 .carousel-content {
     background-color: #151515;
 }
 
+.end-content-area {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
 .logo-end {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 32px;
     align-items: center;
 }
 
@@ -364,8 +417,36 @@ video {
     background-image: url(../img/end-logo_text.svg);
     background-size: cover;
     background-position: center;
-    width: 820px;
-    height: 300px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 898 / 296;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.contact h2 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.contact p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.address p {
+    font-size: 20px;
+    text-align: center;
+    line-height: 28px;
+}
+
+.address strong {
+    font-weight: 600;
 }
 
 
