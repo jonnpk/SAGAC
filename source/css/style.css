@@ -12,7 +12,8 @@
 
 #value-section,
 #practice-section,
-#output-section {
+#output-section,
+#end-section {
     padding: 150px 32px;
 }
 
@@ -67,7 +68,8 @@ video {
 }
 
 .section-title.value,
-.section-title.practice {
+.section-title.practice,
+.section-title.output {
     margin-bottom: 190px;
 }
 
@@ -274,6 +276,97 @@ video {
     background-image: url(../img/prac_sculpture.jpg);
 }
 
+.output-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 180px;
+}
+
+.count-area {
+    display: flex;
+    justify-content: center;
+    gap: clamp(16px, 5vw, 90px);
+}
+
+.count-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.count-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.count-type h2 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.count-type p {
+    font-size: 20px;
+}
+
+.count-img {
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+}
+
+.count-img.artist {
+    background-image: url(../img/output_artist.svg);
+}
+
+.count-img.artwork {
+    background-image: url(../img/output_artwork.svg);
+}
+
+.count-img.visitor {
+    background-image: url(../img/output_visitor.svg);
+}
+
+.count-circle {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    border: 20px solid #151515;
+}
+
+.output-carousel {
+    width: 100%;
+    height: 300px;
+}
+
+.carousel-content {
+    background-color: #151515;
+}
+
+.logo-end {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.logo-end-rect {
+    background-image: url(../img/end-logo_rect.svg);
+    background-size: cover;
+    width: 650px;
+    height: 650px;
+}
+
+.logo-end-text {
+    background-image: url(../img/end-logo_text.svg);
+    background-size: cover;
+    background-position: center;
+    width: 820px;
+    height: 300px;
+}
 
 
 

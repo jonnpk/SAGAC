@@ -7,6 +7,8 @@
     <title>SAGAC</title>
     <link rel="stylesheet" href="source/css/reset.css">
     <link rel="stylesheet" href="source/css/style.css">
+    <link rel="stylesheet" href="source/css/carousel.css">
+    <script src="source/script/carousel.js"></script>
 </head>
 
 <body>
@@ -353,12 +355,10 @@
                     <figure class="section-title-img"></figure>
                 </div>
                 <div class="output-area">
-                    <ul class="count-ar ea">
+                    <ul class="count-area">
                         <li class="count-content">
                             <div class="count-type">
-                                <figure class="count-img">
-                                    <img src="source/img/output_artist.svg" alt="artist">
-                                </figure>
+                                <figure class="count-img artist"></figure>
                                 <h2>Artist</h2>
                                 <p>배출 작가</p>
                             </div>
@@ -368,9 +368,7 @@
                         </li>
                         <li class="count-content">
                             <div class="count-type">
-                                <figure class="count-img">
-                                    <img src="source/img/output_artwork.svg" alt="artwork">
-                                </figure>
+                                <figure class="count-img artwork"></figure>
                                 <h2>Artwork</h2>
                                 <p>누적 작품 수</p>
                             </div>
@@ -380,9 +378,7 @@
                         </li>
                         <li class="count-content">
                             <div class="count-type">
-                                <figure class="count-img">
-                                    <img src="source/img/output_visitor.svg" alt="visitor">
-                                </figure>
+                                <figure class="count-img visitor"></figure>
                                 <h2>Visitor</h2>
                                 <p>누적 관람객</p>
                             </div>
@@ -392,34 +388,14 @@
                         </li>
                     </ul>
                     <div class="output-carousel">
-                        <div class="carousel-contents">
-                            <figure></figure>
-                            <p></p>
-                        </div>
-                        <div class="carousel-contents">
-                            <figure></figure>
-                            <p></p>
-                        </div>
-                        <div class="carousel-contents">
-                            <figure></figure>
-                            <p></p>
-                        </div>
-                        <div class="carousel-contents">
-                            <figure></figure>
-                            <p></p>
-                        </div>
-                        <div class="carousel-contents">
-                            <figure></figure>
-                            <p></p>
-                        </div>
-                        <div class="carousel-contents">
-                            <figure></figure>
-                            <p></p>
-                        </div>
-                        <div class="carousel-contents">
-                            <figure></figure>
-                            <p></p>
-                        </div>
+                        <div class="carousel-content">1</div>
+                        <div class="carousel-content">2</div>
+                        <div class="carousel-content">3</div>
+                        <div class="carousel-content">4</div>
+                        <div class="carousel-content">5</div>
+                        <div class="carousel-content">6</div>
+                        <div class="carousel-content">7</div>
+                        <div class="carousel-content">8</div>
                     </div>
                 </div>
             </div>
@@ -451,7 +427,12 @@
             </div>
         </section>
     </main>
-    <video src="source/video/fashion.mp4" autoplay muted loop controls></video>
+
+    <script>
+        const mySlider = document.querySelector('.output-carousel');
+        
+        createSlider(mySlider, 4, 16, 300, true)
+    </script>
 </body>
 
 </html>
