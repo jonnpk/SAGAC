@@ -42,6 +42,10 @@
     padding: 150px 32px;
 }
 
+#value-section {
+    overflow: hidden;
+}
+
 #end-section {
     padding-top: 150px;
     padding-bottom: 50px;
@@ -149,11 +153,13 @@ header.scrolled .hamburger path {
 
 @keyframes flow {
     0% {
-        transform: translateX(0);
+        -webkit-transform: translate3d(0, 0, 0); /* 구형 브라우저 호환 */
+        transform: translate3d(0, 0, 0);
     }
 
     100% {
-        transform: translateX(-50%);
+        -webkit-transform: translate3d(-50%, 0, 0); /* 구형 브라우저 호환 */
+        transform: translate3d(-50%, 0, 0);
     }
 }
 
@@ -210,15 +216,58 @@ header.scrolled .hamburger path {
 }
 
 .pursue-circle {
-    width: 360px;
-    height: 360px;
-    border: 3px solid #151515;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: absolute;
-    transition: all 0.3s ease;
+    display: inline-block;
+    width: 364px;
+    height: 364px;
+}
+
+.circle-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    font-weight: bold;
+    color: #151515;
+    text-align: center;
+}
+
+.animated-circle {
+    stroke-dasharray: 1131; /* 원 둘레: 2 * π * r (r=180) */
+    stroke-dashoffset: 1131; /* 초기값: 원이 보이지 않음 */
+    animation: draw 1.5s linear forwards;
+    transform: rotate(-90deg); /* 시작 지점을 위쪽(12시 방향)으로 설정 */
+    transform-origin: center;
+    animation-play-state: paused; /* 기본적으로 애니메이션 정지 상태 */
+}
+
+.animated-circle.draw-start {
+    animation-play-state: running; /* 스크롤로 화면에 들어오면 애니메이션 시작 */
+}
+
+.animated-circle.circle-1 {
+    animation-delay: 0s;
+}
+
+.animated-circle.circle-2 {
+    animation-delay: 0.5s;
+}
+
+.animated-circle.circle-3 {
+    animation-delay: 1s;
+}
+
+@keyframes draw {
+    from {
+        stroke-dashoffset: 1131;
+        /* 원이 감춰진 상태 */
+    }
+
+    to {
+        stroke-dashoffset: 0;
+        /* 원이 완전히 그려진 상태 */
+    }
 }
 
 .pursue-circle:nth-child(1) {
@@ -231,11 +280,6 @@ header.scrolled .hamburger path {
 
 .pursue-circle:nth-child(3) {
     transform: translateX(300px);
-}
-
-.pursue-circle p {
-    font-size: 40px;
-    font-weight: bold;
 }
 
 .pursue-introduce {
