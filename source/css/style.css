@@ -513,3 +513,25 @@ header.scrolled .hamburger path {
     font-size: 16px;
     font-weight: 600;
 }
+
+.to-left {
+    transform: translateX(-200px);
+}
+
+.to-right {
+    transform: translateX(200px);
+}
+
+.to-bottom {
+    transform: translateY(200px);
+}
+
+.fade {
+    opacity: 0;
+    transition: 2s;
+}
+
+.in {
+    opacity: 1;
+    transform: none;
+}
