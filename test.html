@@ -1,95 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>원형 프로그레스 바</title>
+        <style>
+            .top {
+                height: 100vh;
+                background: #3498db;
+            }
+            .progress-container {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 50px;
+            }
+            .progress-wrapper {
+                position: relative;
+                width: 150px;
+                height: 150px;
+            }
+            .progress-circle {
+                transform: rotate(-90deg); /* 시작점을 위로 이동 */
+            }
+            .progress-circle circle {
+                fill: none;
+                stroke-width: 10;
+            }
+            .progress-circle .background {
+                stroke: #e6e6e6;
+            }
+            .progress-circle .progress {
+                stroke: #3498db;
+                stroke-linecap: round;
+                stroke-dasharray: 440; /* 원 둘레 */
+                stroke-dashoffset: 440; /* 초기 값 */
+                transition: stroke-dashoffset 0.5s ease;
+            }
+            .progress-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 20px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="top"></section>
+        <div class="progress-container" id="progressContainer">
+            <!-- JavaScript가 여기에 동적으로 추가 -->
+        </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        /* 애니메이션 효과 추가 */
-        .animated-circle {
-            stroke-dasharray: 1131;
-            /* 원 둘레: 2 * π * r (r=180) */
-            stroke-dashoffset: 1131;
-            /* 초기값: 원이 보이지 않음 */
-            animation: draw 1.5s linear forwards;
-            /* 2초 동안 선을 그리며 애니메이션 실행 */
-            transform: rotate(-90deg);
-            /* 시작 지점을 위쪽(12시 방향)으로 설정 */
-            transform-origin: center;
-        }
+        <script>
+            // Intersection Observer로 애니메이션 트리거
+            function initProgressBarObserver() {
+                const progressBars =
+                    document.querySelectorAll(".progress-wrapper"); // 프로그레스 바 요소들
+                const options = {
+                    root: null, // 뷰포트를 기준으로 관찰
+                    threshold: 0.5, // 50% 이상 보이면 트리거
+                };
 
-        .animated-circle.circle-1 {
-            animation-delay: 0s;
-        }
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        const progressId = entry.target.getAttribute("data-id"); // 데이터 속성에서 ID 가져오기
+                        const target = entry.target.getAttribute("data-value"); // 데이터 속성에서 값 가져오기
+                        const duration =
+                            entry.target.getAttribute("data-duration"); // 데이터 속성에서 시간 가져오기
 
-        .animated-circle.circle-2 {
-            animation-delay: 0.5s;
-        }
+                        if (entry.isIntersecting) {
+                            // 화면 안으로 들어왔을 때
+                            resetProgress(progressId, false); // Transition 유지 X (false)
+                            animateProgress(progressId, target, duration); // 애니메이션 시작
+                        } else {
+                            // 화면 밖으로 나갔을 때
+                            resetProgress(progressId, true); // Transition 없이 초기화 (true)
+                        }
+                    });
+                }, options);
 
-        .animated-circle.circle-3 {
-            animation-delay: 1s;
-        }
-
-        /* 애니메이션 정의 */
-        @keyframes draw {
-            from {
-                stroke-dashoffset: 1131;
-                /* 원이 감춰진 상태 */
+                progressBars.forEach((bar) => {
+                    observer.observe(bar); // 각 프로그레스 바를 관찰
+                });
             }
 
-            to {
-                stroke-dashoffset: 0;
-                /* 원이 완전히 그려진 상태 */
+            // 프로그레스 초기화 함수
+            function resetProgress(id, instant) {
+                const progressCircle = document.getElementById(
+                    `progress-${id}`
+                );
+                const progressText = document.getElementById(`text-${id}`);
+
+                const radius = progressCircle.r.baseVal.value;
+                const circumference = 2 * Math.PI * radius;
+
+                // Transition 없이 초기화
+                if (instant) {
+                    progressCircle.style.transition = "none"; // 애니메이션 제거
+                    progressText.style.transition = "none"; // 텍스트 애니메이션 제거
+                } else {
+                    progressCircle.style.transition = ""; // 원래 Transition 복구
+                    progressText.style.transition = ""; // 텍스트 Transition 복구
+                }
+
+                progressCircle.style.strokeDashoffset = circumference; // 초기 상태로 재설정
+                progressText.textContent = `0%`; // 텍스트 초기화
             }
-        }
 
-        .pursue-circle {
-            position: relative;
-            display: inline-block;
-            width: 364px;
-            height: 364px;
-        }
+            // 애니메이션 함수
+            function animateProgress(id, targetValue, duration = 1000) {
+                const progressCircle = document.getElementById(
+                    `progress-${id}`
+                );
+                const progressText = document.getElementById(`text-${id}`);
+                const radius = progressCircle.r.baseVal.value;
+                const circumference = 2 * Math.PI * radius;
 
-        .circle-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-family: Arial, sans-serif;
-            font-size: 24px;
-            font-weight: bold;
-            color: #151515;
-            text-align: center;
-        }
-    </style>
-</head>
+                progressCircle.style.strokeDasharray = `${circumference}`;
+                progressCircle.style.transition = `stroke-dashoffset ${duration}ms linear`; // 선형 애니메이션
+                progressText.style.transition = `all ${duration}ms linear`;
 
-<body>
-    <div class="pursue-circle">
-        <svg width="364" height="364" viewBox="0 0 364 364" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- 첫 번째 원 -->
-            <circle cx="182" cy="182" r="180" stroke="#151515" stroke-width="3" class="animated-circle circle-1" />
-        </svg>
-        <div class="circle-text">Sensitive</div>
-    </div>
-    <div class="pursue-circle">
-        <svg width="364" height="364" viewBox="0 0 364 364" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- 두 번째 원 -->
-            <circle cx="182" cy="182" r="180" stroke="#151515" stroke-width="3" class="animated-circle circle-2" />
-        </svg>
-        <div class="circle-text">Creative</div>
-    </div>
-    <div class="pursue-circle">
-        <svg width="364" height="364" viewBox="0 0 364 364" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- 세 번째 원 -->
-            <circle cx="182" cy="182" r="180" stroke="#151515" stroke-width="3" class="animated-circle circle-3" />
-        </svg>
-        <div class="circle-text">Balanced</div>
-    </div>
+                // 애니메이션 시작
+                const offset =
+                    circumference - (targetValue / 100) * circumference;
+                progressCircle.style.strokeDashoffset = offset;
+                progressText.textContent = `${targetValue}%`;
+            }
 
+            // 프로그레스 바 생성 함수
+            function createProgressBar(id, targetValue, duration) {
+                const wrapper = document.createElement("div");
+                wrapper.classList.add("progress-wrapper");
+                wrapper.setAttribute("data-id", id); // ID 저장
+                wrapper.setAttribute("data-value", targetValue); // 목표 값 저장
+                wrapper.setAttribute("data-duration", duration); // 지속 시간 저장
 
+                wrapper.innerHTML = `
+    <svg class="progress-circle" width="150" height="150">
+      <circle class="background" cx="75" cy="75" r="70"></circle>
+      <circle class="progress" cx="75" cy="75" r="70" id="progress-${id}"></circle>
+    </svg>
+    <div class="progress-text" id="text-${id}">0%</div>
+  `;
 
-</body>
+                progressContainer.appendChild(wrapper);
+            }
 
+            // 프로그레스 컨테이너 가져오기
+            const progressContainer =
+                document.getElementById("progressContainer");
+
+            // 3개의 프로그레스 바 생성
+            createProgressBar(1, 70, 2000); // 첫 번째 바
+            createProgressBar(2, 50, 1500); // 두 번째 바
+            createProgressBar(3, 30, 1000); // 세 번째 바
+
+            // Intersection Observer 초기화
+            initProgressBarObserver();
+        </script>
+    </body>
 </html>

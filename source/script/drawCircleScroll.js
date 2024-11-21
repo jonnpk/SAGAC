@@ -1,4 +1,5 @@
 const drawContent = document.getElementsByClassName("draw-interactive");
+
 window.addEventListener("scroll", () => {
     const winH = window.innerHeight;
 
@@ -7,9 +8,9 @@ window.addEventListener("scroll", () => {
 
         if (contentTop - winH < 0) {
             drawContent[i].classList.add("draw-start");
-        }
-        if (contentTop - winH > 0) {
+        }else {
             drawContent[i].classList.remove("draw-start");
         }
     }
-});
+}
+);

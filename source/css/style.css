@@ -239,11 +239,6 @@ header.scrolled .hamburger path {
     animation: draw 1.5s linear forwards;
     transform: rotate(-90deg); /* 시작 지점을 위쪽(12시 방향)으로 설정 */
     transform-origin: center;
-    animation-play-state: paused; /* 기본적으로 애니메이션 정지 상태 */
-}
-
-.animated-circle.draw-start {
-    animation-play-state: running; /* 스크롤로 화면에 들어오면 애니메이션 시작 */
 }
 
 .animated-circle.circle-1 {
@@ -256,6 +251,14 @@ header.scrolled .hamburger path {
 
 .animated-circle.circle-3 {
     animation-delay: 1s;
+}
+
+.pursue-circle-box.draw-start .animated-circle {
+    animation-play-state: running;
+}
+
+.pursue-circle-box:not(.draw-start) .animated-circle {
+    animation: none; /* 뷰에서 벗어나면 초기화 */
 }
 
 @keyframes draw {
@@ -380,6 +383,7 @@ header.scrolled .hamburger path {
     flex-wrap: wrap;
     column-gap: 2%;
     row-gap: 32px;
+    position: relative;
 }
 
 .practice-area article {
@@ -397,6 +401,12 @@ header.scrolled .hamburger path {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transition: all 0.5s;
+}
+
+.practice-area figure:hover {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
 }
 
 .practice-area video {
@@ -408,6 +418,11 @@ header.scrolled .hamburger path {
 
 .practice-area h2 {
     display: none;
+}
+
+.practice-area figure:hover h2 {
+    display: block;
+    font-size: 24px;
 }
 
 .painting figure {
