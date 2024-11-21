@@ -1,35 +1,15 @@
 @import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
 
-/* body {
-    overflow: hidden;
-}
-
-#wrap {
-    transform: translateY(100vh);
-} */
 
 #intro-section {
     background-color: #000002;
     height: 100vh;
     box-sizing: border-box;
     overflow: hidden;
-    /* position: fixed; */
     width: 100%;
     top: 0;
     left: 0;
     z-index: 10;
-}
-
-.scrolled #intro-section {
-    transform: translateY(-100%);
-}
-
-.scroll-disabled {
-    overflow-y: hidden;
-}
-
-.scroll-enabled {
-    overflow-y: auto;
 }
 
 #weare-section {
@@ -139,7 +119,7 @@ header.scrolled .hamburger path {
     animation: flow 60s linear infinite;
 }
 
-.flowing-text-wrap.end > .flowing-text {
+.flowing-text-wrap.end>.flowing-text {
     color: #151515;
 }
 
@@ -153,12 +133,14 @@ header.scrolled .hamburger path {
 
 @keyframes flow {
     0% {
-        -webkit-transform: translate3d(0, 0, 0); /* 구형 브라우저 호환 */
+        -webkit-transform: translate3d(0, 0, 0);
+        /* 구형 브라우저 호환 */
         transform: translate3d(0, 0, 0);
     }
 
     100% {
-        -webkit-transform: translate3d(-50%, 0, 0); /* 구형 브라우저 호환 */
+        -webkit-transform: translate3d(-50%, 0, 0);
+        /* 구형 브라우저 호환 */
         transform: translate3d(-50%, 0, 0);
     }
 }
@@ -229,15 +211,17 @@ header.scrolled .hamburger path {
     transform: translate(-50%, -50%);
     font-size: 40px;
     font-weight: bold;
-    color: #151515;
     text-align: center;
 }
 
 .animated-circle {
-    stroke-dasharray: 1131; /* 원 둘레: 2 * π * r (r=180) */
-    stroke-dashoffset: 1131; /* 초기값: 원이 보이지 않음 */
+    stroke-dasharray: 1131;
+    /* 원 둘레: 2 * π * r (r=180) */
+    stroke-dashoffset: 1131;
+    /* 초기값: 원이 보이지 않음 */
     animation: draw 1.5s linear forwards;
-    transform: rotate(-90deg); /* 시작 지점을 위쪽(12시 방향)으로 설정 */
+    transform: rotate(-90deg);
+    /* 시작 지점을 위쪽(12시 방향)으로 설정 */
     transform-origin: center;
 }
 
@@ -258,7 +242,17 @@ header.scrolled .hamburger path {
 }
 
 .pursue-circle-box:not(.draw-start) .animated-circle {
-    animation: none; /* 뷰에서 벗어나면 초기화 */
+    animation: none;
+    /* 뷰에서 벗어나면 초기화 */
+}
+
+.count-area.draw-start .animated-circle {
+    animation-play-state: running;
+}
+
+.count-area:not(.draw-start) .animated-circle {
+    animation: none;
+    /* 뷰에서 벗어나면 초기화 */
 }
 
 @keyframes draw {
@@ -299,7 +293,7 @@ header.scrolled .hamburger path {
 
 .pursue-introduce p {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     text-align: center;
     line-height: 26px;
 }
@@ -359,17 +353,19 @@ header.scrolled .hamburger path {
 .value-article-title h2 {
     font-size: 48px;
     font-weight: bold;
+    color: #00498c;
 }
 
 .value-article-title p {
     font-size: 16px;
     font-weight: 500;
+    color: #585858;
 }
 
 .value-article-text {
     font-size: 20px;
     line-height: 28px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .value-article-title.growth,
@@ -383,13 +379,13 @@ header.scrolled .hamburger path {
     flex-wrap: wrap;
     column-gap: 2%;
     row-gap: 32px;
-    position: relative;
 }
 
 .practice-area article {
     flex: 1 1 48%;
     max-width: 918px;
     height: auto;
+    position: relative;
 }
 
 .practice-area figure {
@@ -417,12 +413,24 @@ header.scrolled .hamburger path {
 }
 
 .practice-area h2 {
-    display: none;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
+    line-height: 56px;
+    transition: opacity 1s;
+    pointer-events: none;
 }
 
-.practice-area figure:hover h2 {
-    display: block;
-    font-size: 24px;
+.practice-area figure:hover+h2 {
+    opacity: 1;
 }
 
 .painting figure {
@@ -488,26 +496,120 @@ header.scrolled .hamburger path {
 }
 
 .count-circle {
-    width: 270px;
-    height: 270px;
-    border-radius: 50%;
-    border: 20px solid #151515;
+    position: relative;
 }
 
 .output-carousel {
+    position: relative;
     width: 100%;
+    max-width: 1836px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+    padding: 0;
+}
+
+.carousel-item {
+    flex: 1 0 33.33%;
+    /* 기본적으로 3개를 표시 */
+    padding: 10px;
+    /* box-sizing: border-box; */
+    width: 580px;
+    /* 가로 크기 */
+    height: 580px;
+    /* 세로 크기 */
+    list-style: none;
+    text-align: center;
+}
+
+.output-pic {
+    margin: 0;
     display: flex;
     justify-content: center;
-    gap: 16px;
-}
-
-.carousel-content {
+    align-items: center;
     width: 580px;
+    /* 부모와 동일한 가로 크기 */
     height: 580px;
-    background-color: #151515;
+    /* 부모와 동일한 세로 크기 */
 }
 
-.carousel-content {
+.output-pic > img {
+    width: 580px;
+    /* 부모 크기와 동일 */
+    height: 580px;
+    /* 부모 크기와 동일 */
+    object-fit: cover;
+    /* 이미지가 부모 크기를 넘어가지 않도록 조정 */
+}
+
+@media (max-width: 1790px) {
+    .carousel-item {
+        flex: 1 0 50%;
+        /* 화면이 작아질 경우 2개 표시 */
+    }
+
+    .output-pic {
+        width: 100%;
+        /* 부모와 동일한 가로 크기 */
+        height: 580px;
+        /* 부모와 동일한 세로 크기 */
+    }
+}
+
+@media (max-width: 1400px) {
+    .carousel-item {
+        flex: 1 0 100%;
+        /* 더 작아지면 1개 표시 */
+    }
+}
+
+/* 버튼 스타일 */
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 10px;
+
+    cursor: pointer;
+    z-index: 1;
+
+    font-size: 20px;
+    color: var(--accent-color);
+}
+
+.prev-btn {
+    left: 16px;
+}
+
+.next-btn {
+    right: 16px;
+}
+
+/* 닷 스타일 */
+.dots {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background-color: lightgray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
     background-color: #151515;
 }
 
