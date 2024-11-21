@@ -212,6 +212,7 @@ header.scrolled .hamburger path {
     font-size: 40px;
     font-weight: bold;
     text-align: center;
+    color: #151515;
 }
 
 .animated-circle {
@@ -223,6 +224,10 @@ header.scrolled .hamburger path {
     transform: rotate(-90deg);
     /* 시작 지점을 위쪽(12시 방향)으로 설정 */
     transform-origin: center;
+}
+
+.animated-circle.count {
+    animation: draw 2.5s linear forwards;
 }
 
 .animated-circle.circle-1 {
@@ -289,6 +294,7 @@ header.scrolled .hamburger path {
 .pursue-introduce h2 {
     font-size: 32px;
     font-weight: bold;
+    color: #151515;
 }
 
 .pursue-introduce p {
@@ -296,6 +302,7 @@ header.scrolled .hamburger path {
     font-weight: 500;
     text-align: center;
     line-height: 26px;
+    color: #151515;
 }
 
 .value-area {
@@ -353,7 +360,7 @@ header.scrolled .hamburger path {
 .value-article-title h2 {
     font-size: 48px;
     font-weight: bold;
-    color: #00498c;
+    color: #00267e;
 }
 
 .value-article-title p {
@@ -366,6 +373,7 @@ header.scrolled .hamburger path {
     font-size: 20px;
     line-height: 28px;
     font-weight: 500;
+    color: #151515;
 }
 
 .value-article-title.growth,
@@ -386,6 +394,16 @@ header.scrolled .hamburger path {
     max-width: 918px;
     height: auto;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.article-title {
+    font-size: 40px;
+    font-weight: bold;
+    pointer-events: none;
+    color: #00267e;
 }
 
 .practice-area figure {
@@ -398,6 +416,7 @@ header.scrolled .hamburger path {
     background-position: center;
     background-repeat: no-repeat;
     transition: all 0.5s;
+    overflow: hidden;
 }
 
 .practice-area figure:hover {
@@ -412,7 +431,7 @@ header.scrolled .hamburger path {
     object-position: center;
 }
 
-.practice-area h2 {
+.hover-text {
     width: 100%;
     opacity: 0;
     position: absolute;
@@ -421,7 +440,7 @@ header.scrolled .hamburger path {
     transform: translate(-50%, -50%);
     text-align: center;
     color: #fff;
-    font-size: 40px;
+    font-size: 36px;
     font-weight: bold;
     text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
     line-height: 56px;
@@ -429,7 +448,7 @@ header.scrolled .hamburger path {
     pointer-events: none;
 }
 
-.practice-area figure:hover+h2 {
+.practice-area figure:hover + .hover-text {
     opacity: 1;
 }
 
@@ -458,7 +477,7 @@ header.scrolled .hamburger path {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 32px;
+    gap: 56px;
 }
 
 .count-type {
@@ -471,15 +490,17 @@ header.scrolled .hamburger path {
 .count-type h2 {
     font-size: 32px;
     font-weight: 600;
+    color: #00267e;
 }
 
 .count-type p {
     font-size: 20px;
+    color: #151515;
 }
 
 .count-img {
-    width: 120px;
-    height: 120px;
+    width: 72px;
+    height: 72px;
     background-size: cover;
 }
 
@@ -610,7 +631,7 @@ header.scrolled .hamburger path {
 }
 
 .dot.active {
-    background-color: #151515;
+    background-color: #00267e;
 }
 
 .end-content-area {
@@ -631,6 +652,9 @@ header.scrolled .hamburger path {
     background-size: cover;
     width: 500px;
     height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo-end-text {
@@ -641,6 +665,27 @@ header.scrolled .hamburger path {
     max-width: 522px;
     height: auto;
     aspect-ratio: 522 / 172;
+}
+
+.come-with-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 48px;
+    font-weight: bold;
+    gap: 8px;
+    color: rgb(0, 38, 126);
+}
+
+.interactive-text {
+    opacity: 0;
+    transform: translateY(20px); /* 아래에서 올라오는 효과 */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.interactive-text.in {
+    opacity: 1;
+    transform: translateY(0); /* 제자리로 이동 */
 }
 
 .contact {
