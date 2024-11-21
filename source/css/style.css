@@ -1,8 +1,10 @@
 @import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
 
+body {
+    background-color: #000002;
+}
 
 #intro-section {
-    background-color: #000002;
     height: 100vh;
     box-sizing: border-box;
     overflow: hidden;
@@ -52,14 +54,6 @@ header {
     width: 100%;
     box-sizing: border-box;
     z-index: 99;
-}
-
-header.scrolled g path {
-    fill: #151515;
-}
-
-header.scrolled .hamburger path {
-    fill: #151515;
 }
 
 .hamburger:hover path {
@@ -120,7 +114,7 @@ header.scrolled .hamburger path {
 }
 
 .flowing-text-wrap.end>.flowing-text {
-    color: #151515;
+    color: #fff;
 }
 
 .flowing-text {
