@@ -256,7 +256,7 @@
                             <svg width="364" height="364" viewBox="0 0 364 364" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <!-- 첫 번째 원 -->
-                                <circle cx="182" cy="182" r="180" stroke="#00267e" stroke-width="4"
+                                <circle cx="182" cy="182" r="180" stroke="#FF1493" stroke-width="4"
                                     class="animated-circle circle-1" />
                             </svg>
                             <div class="circle-text">Sensitive</div>
@@ -265,7 +265,7 @@
                             <svg width="364" height="364" viewBox="0 0 364 364" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <!-- 두 번째 원 -->
-                                <circle cx="182" cy="182" r="180" stroke="#00267e" stroke-width="4"
+                                <circle cx="182" cy="182" r="180" stroke="#FF1493" stroke-width="4"
                                     class="animated-circle circle-2" />
                             </svg>
                             <div class="circle-text">Creative</div>
@@ -274,7 +274,7 @@
                             <svg width="364" height="364" viewBox="0 0 364 364" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <!-- 세 번째 원 -->
-                                <circle cx="182" cy="182" r="180" stroke="#00267e" stroke-width="4"
+                                <circle cx="182" cy="182" r="180" stroke="#FF1493" stroke-width="4"
                                     class="animated-circle circle-3" />
                             </svg>
                             <div class="circle-text">Balanced</div>
@@ -352,7 +352,12 @@
                 </div>
                 <div class="practice-area">
                     <article class="painting">
-                        <h2 class="article-title">Painting</h2>
+                        <div class="practice-article-title-box">
+                            <div class="practice-article-title-wrap">
+                                <h2 class="practice-article-title">Painting</h2>
+                            </div>
+                            <a href="#" class="learn-more-btn">Learn More</a>
+                        </div>
                         <figure></figure>
                         <h2 class="hover-text">
                             색과 형태를 통해<br>감정, 생각,
@@ -360,7 +365,12 @@
                         </h2>
                     </article>
                     <article class="sculpture">
-                        <h2 class="article-title">Sculpture</h2>
+                        <div class="practice-article-title-box">
+                            <div class="practice-article-title-wrap">
+                                <h2 class="practice-article-title">Sculpture</h2>
+                            </div>
+                            <a href="#" class="learn-more-btn">Learn More</a>
+                        </div>
                         <figure></figure>
                         <h2 class="hover-text">
                             형상과 공간을 통해<br>
@@ -368,7 +378,12 @@
                         </h2>
                     </article>
                     <article class="fashion">
-                        <h2 class="article-title">Fashion</h2>
+                        <div class="practice-article-title-box">
+                            <div class="practice-article-title-wrap">
+                                <h2 class="practice-article-title">Fashion</h2>
+                            </div>
+                            <a href="#" class="learn-more-btn">Learn More</a>
+                        </div>
                         <figure>
                             <video src="source/video/fashion.mp4" autoplay muted loop></video>
                         </figure>
@@ -378,7 +393,12 @@
                         </h2>
                     </article>
                     <article class="digitalart">
-                        <h2 class="article-title">Digital Art</h2>
+                        <div class="practice-article-title-box">
+                            <div class="practice-article-title-wrap">
+                                <h2 class="practice-article-title">Digital Art</h2>
+                            </div>
+                            <a href="#" class="learn-more-btn">Learn More</a>
+                        </div>
                         <figure>
                             <video src="source/video/digital-art.mp4" autoplay muted loop></video>
                         </figure>
@@ -408,7 +428,7 @@
                             <div class="count-circle">
                                 <svg width="270" height="270" viewBox="0 0 270 270" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
-                                    <circle cx="135" cy="135" r="132" stroke="#00267e" stroke-width="50"
+                                    <circle cx="135" cy="135" r="132" stroke="#FF1493" stroke-width="50"
                                         class="animated-circle circle-1 count" />
                                 </svg>
                                 <div class="circle-text count-artist"></div>
@@ -423,7 +443,7 @@
                             <div class="count-circle">
                                 <svg width="270" height="270" viewBox="0 0 270 270" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
-                                    <circle cx="135" cy="135" r="132" stroke="#00267e" stroke-width="50"
+                                    <circle cx="135" cy="135" r="132" stroke="#FF1493" stroke-width="50"
                                         class="animated-circle circle-1 count" />
                                 </svg>
                                 <div class="circle-text count-artwork"></div>
@@ -438,7 +458,7 @@
                             <div class="count-circle">
                                 <svg width="270" height="270" viewBox="0 0 270 270" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
-                                    <circle cx="135" cy="135" r="132" stroke="#00267e" stroke-width="50"
+                                    <circle cx="135" cy="135" r="132" stroke="#FF1493" stroke-width="50"
                                         class="animated-circle circle-1 count" />
                                 </svg>
                                 <div class="circle-text count-visitor"></div>
@@ -446,54 +466,93 @@
                         </li>
                     </ul>
                     <div class="output-carousel">
-                        <button class="prev-btn">&lt;</button>
-                        <button class="next-btn">&gt;</button>
+                        <button class="prev-btn">
+                            <svg width="16" height="28" viewBox="0 0 16 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0.629312 12.2566L12.7837 -0.000187188L15.8218 3.06348L5.18641 13.7885L15.8218 24.5135L12.7837 27.5771L0.629311 15.3203C0.226518 14.914 0.000241034 14.363 0.000241084 13.7885C0.000241134 13.214 0.226519 12.663 0.629312 12.2566Z"
+                                    fill="#fff" />
+                            </svg>
+                        </button>
+                        <button class="next-btn">
+                            <svg width="16" height="28" viewBox="0 0 16 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M15.1925 15.3205L3.03806 27.5773L0 24.5137L10.6354 13.7887L0 3.06367L3.03806 0L15.1925 12.2568C15.5953 12.6631 15.8215 13.2141 15.8215 13.7887C15.8215 14.3632 15.5953 14.9142 15.1925 15.3205Z"
+                                    fill="#fff" />
+                            </svg>
+                        </button>
 
                         <ul class="carousel">
                             <li class="carousel-item">
-                              <figure class="output-pic">
-                                <img src="https://cdn.dailyvet.co.kr/wp-content/uploads/2024/05/15231647/20240515ceva_experts4.jpg"
-                                  alt="net_high_shelf" />
-                              </figure>
+                                <figure class="carousel-pic">
+                                    <img src="source/img/carousel_vol1.jpg" alt="지그재그展" />
+                                </figure>
+                                <div class="carousel-text">
+                                    Vol.1 &lt;지그재그展&gt;<br><span class="output-date">2019.05.21-05.24</span>
+                                </div>
                             </li>
                             <li class="carousel-item">
-                              <figure class="output-pic">
-                                <img src="https://www.palnews.co.kr/news/photo/201801/92969_25283_5321.jpg" alt="toast_wide_drawer" />
-                              </figure>
+                                <figure class="carousel-pic">
+                                    <img src="source/img/carousel_vol2.jpg" alt="INSIDE AND OUTSIDE" />
+                                </figure>
+                                <div class="carousel-text">
+                                    Vol.2 &lt;INSIDE AND OUTSIDE&gt;<br><span
+                                        class="output-date">2022.03.01-03.05</span>
+                                </div>
                             </li>
                             <li class="carousel-item">
-                              <figure class="output-pic">
-                                <img src="https://cdn.hellodd.com/news/photo/202005/71835_craw1.jpg" alt="double_wood_shelf" />
-                              </figure>
+                                <figure class="carousel-pic">
+                                    <img src="source/img/carousel_hyundai.jpg" alt="신촌 현대백화점 드로잉 콜라보" />
+                                </figure>
+                                <div class="carousel-text">
+                                    &lt;신촌 현대백화점 드로잉 콜라보&gt;<br><span class="output-date">2022.04.21-05.05</span>
+                                </div>
                             </li>
                             <li class="carousel-item">
-                              <figure class="output-pic">
-                                <img
-                                  src="https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/780/image/VdHoJMX2eAGpZZPEm05fZ6gja2k.PNG"
-                                  alt="brunch_wood_chair" />
-                              </figure>
+                                <figure class="carousel-pic">
+                                    <img src="source/img/carousel_vol3.jpg" alt="21세기; 전쟁 전염병 그리고 해방">
+                                </figure>
+                                <div class="carousel-text">
+                                    Vol.3 &lt;21세기; 전쟁 전염병 그리고 해방&gt;<br><span
+                                        class="output-date">2022.10.03-10.10</span>
+                                </div>
                             </li>
                             <li class="carousel-item">
-                              <figure class="output-pic">
-                                <img src="https://i.ytimg.com/vi/5_LwQRahaYk/maxresdefault.jpg" alt="net_high_shelf" />
-                              </figure>
+                                <figure class="carousel-pic">
+                                    <img src="source/img/carousel_vol0.jpg" alt="I.S.O" />
+                                </figure>
+                                <div class="carousel-text">
+                                    Vol.0 &lt;I.S.O&gt;<br><span class="output-date">2023.02.10-02.13</span>
+                                </div>
                             </li>
                             <li class="carousel-item">
-                              <figure class="output-pic">
-                                <img
-                                  src="https://21gram.blog/wp-content/uploads/2023/11/%EA%B3%A0%EC%96%91%EC%9D%B4-%EC%84%A4%EC%82%AC-1024x682.jpg"
-                                  alt="book_high_shelf" />
-                              </figure>
+                                <figure class="carousel-pic">
+                                    <img src="source/img/carousel_readroad.jpg" alt="마포구 레드로드 거리미술전" />
+                                </figure>
+                                <div class="carousel-text">
+                                    &lt;마포구 레드로드 거리미술전&gt; 단독 참여<br><span class="output-date">2023.05.13-05.14</span>
+                                </div>
                             </li>
                             <li class="carousel-item">
-                              <figure class="output-pic">
-                                <img src="https://cdn.dailyvet.co.kr/wp-content/uploads/2024/03/28233032/20240328ceva_experts3.jpg"
-                                  alt="simple_table" />
-                              </figure>
+                                <figure class="carousel-pic">
+                                    <img src="source/img/carousel_vol4.jpg" alt="공극" />
+                                </figure>
+                                <div class="carousel-text">
+                                    Vol.4 &lt;공극&gt;<br><span class="output-date">2023.06.02-06.06</span>
+                                </div>
                             </li>
-                          </ul>
+                            <li class="carousel-item">
+                                <figure class="carousel-pic">
+                                    <video src="source/video/carousel_vol5.mp4" autoplay muted loop></video>
+                                </figure>
+                                <div class="carousel-text">
+                                    Vol.5 &lt;me;thos&gt;<br><span class="output-date">2023.05.01-05.06</span>
+                                </div>
+                            </li>
+                        </ul>
 
-                          <div class="dots">
+                        <div class="dots">
                             <span class="dot"></span>
                             <span class="dot"></span>
                             <span class="dot"></span>
@@ -501,7 +560,8 @@
                             <span class="dot"></span>
                             <span class="dot"></span>
                             <span class="dot"></span>
-                          </div>
+                            <span class="dot"></span>
+                        </div>
                     </div>
                 </div>
             </div>
