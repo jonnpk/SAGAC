@@ -568,6 +568,10 @@ header {
     box-sizing: border-box;
 }
 
+.carousel-item a {
+    text-decoration: none;
+}
+
 .carousel-text {
     width: 100%;
     font-size: 18px;
