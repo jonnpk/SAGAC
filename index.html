@@ -467,19 +467,26 @@
                     </ul>
                     <div class="output-carousel">
                         <button class="prev-btn">
-                            <svg width="16" height="28" viewBox="0 0 16 28" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M0.629312 12.2566L12.7837 -0.000187188L15.8218 3.06348L5.18641 13.7885L15.8218 24.5135L12.7837 27.5771L0.629311 15.3203C0.226518 14.914 0.000241034 14.363 0.000241084 13.7885C0.000241134 13.214 0.226519 12.663 0.629312 12.2566Z"
-                                    fill="#fff" />
-                            </svg>
+                            <svg width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <filter id="drop-shadow" x="-50%" y="-50%" width="200%" height="200%">
+                                      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="rgba(0, 0, 0, 0.5)" />
+                                    </filter>
+                                </defs>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.629312 12.2566L12.7837 -0.000187188L15.8218 3.06348L5.18641 13.7885L15.8218 24.5135L12.7837 27.5771L0.629311 15.3203C0.226518 14.914 0.000241034 14.363 0.000241084 13.7885C0.000241134 13.214 0.226519 12.663 0.629312 12.2566Z" fill="black" filter="url(#drop-shadow)"/>
+                                </svg>
                         </button>
                         <button class="next-btn">
                             <svg width="16" height="28" viewBox="0 0 16 28" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <filter id="drop-shadow" x="-50%" y="-50%" width="200%" height="200%">
+                                      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="rgba(0, 0, 0, 0.5)" />
+                                    </filter>
+                                </defs>
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M15.1925 15.3205L3.03806 27.5773L0 24.5137L10.6354 13.7887L0 3.06367L3.03806 0L15.1925 12.2568C15.5953 12.6631 15.8215 13.2141 15.8215 13.7887C15.8215 14.3632 15.5953 14.9142 15.1925 15.3205Z"
-                                    fill="#fff" />
+                                    fill="#fff" filter="url(#drop-shadow)"/>
                             </svg>
                         </button>
 
