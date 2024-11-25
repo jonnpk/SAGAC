@@ -9,9 +9,6 @@ body {
     box-sizing: border-box;
     overflow: hidden;
     width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 10;
 }
 
 #value-section,
@@ -190,9 +187,7 @@ header {
 
 .pursue-circle {
     position: absolute;
-    display: inline-block;
-    width: 364px;
-    height: 364px;
+    height: 100%;
 }
 
 .circle-text {
@@ -205,6 +200,15 @@ header {
     text-align: center;
     color: #FFF;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+
+:root {
+    --svg1-size: 360;
+    --svg2-size: 270;
+     /* 기본 뷰박스 크기 */
+    --svg2-stroke-width: 50;
+     /* count-circle의 stroke-width 초기값 */
 }
 
 .animated-circle {
@@ -540,6 +544,7 @@ header {
 
 .count-circle {
     position: relative;
+    height: 270px;
 }
 
 .output-carousel {
@@ -598,24 +603,6 @@ header {
     object-fit: cover;
     object-position: center; 
     display: block;
-}
-
-@media (max-width: 1790px) {
-    .carousel-item {
-        flex: 1 0 50%; /* 화면이 작아질 경우 2개 표시 */
-    }
-
-    .carousel-pic {
-        width: 100%; /* 부모와 동일한 가로 크기 */
-        height: 580px; /* 부모와 동일한 세로 크기 */
-        
-    }
-}
-
-@media (max-width: 1400px) {
-    .carousel-item {
-        flex: 1 0 100%; /* 더 작아지면 1개 표시 */   
-    }
 }
 
 .prev-btn,
@@ -767,4 +754,8 @@ header {
 .in {
     opacity: 1;
     transform: none;
+}
+
+.br-1024 {
+    display: none;
 }

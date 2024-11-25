@@ -7,6 +7,7 @@
     <title>SAGAC</title>
     <link rel="stylesheet" href="source/css/reset.css">
     <link rel="stylesheet" href="source/css/style.css">
+    <link rel="stylesheet" href="source/css/media.css">
 </head>
 
 <body>
@@ -253,28 +254,28 @@
                 <div class="pursue-area">
                     <div class="pursue-circle-box draw-interactive">
                         <div class="pursue-circle">
-                            <svg width="364" height="364" viewBox="0 0 364 364" fill="none"
+                            <svg class="animated-circle-svg svg1" width="auto" height="100%" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <!-- 첫 번째 원 -->
-                                <circle cx="182" cy="182" r="180" stroke="#FF1493" stroke-width="4"
+                                <circle cx="50%" cy="50%" r="49%" stroke="#FF1493" stroke-width="4"
                                     class="animated-circle circle-1" />
                             </svg>
                             <div class="circle-text">Sensitive</div>
                         </div>
                         <div class="pursue-circle">
-                            <svg width="364" height="364" viewBox="0 0 364 364" fill="none"
+                            <svg class="animated-circle-svg svg1" width="auto" height="100%" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <!-- 두 번째 원 -->
-                                <circle cx="182" cy="182" r="180" stroke="#FF1493" stroke-width="4"
+                                <circle cx="50%" cy="50%" r="49%" stroke="#FF1493" stroke-width="4"
                                     class="animated-circle circle-2" />
                             </svg>
                             <div class="circle-text">Creative</div>
                         </div>
                         <div class="pursue-circle">
-                            <svg width="364" height="364" viewBox="0 0 364 364" fill="none"
+                            <svg class="animated-circle-svg svg1" width="auto" height="100%" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <!-- 세 번째 원 -->
-                                <circle cx="182" cy="182" r="180" stroke="#FF1493" stroke-width="4"
+                                <circle cx="50%" cy="50%" r="49%" stroke="#FF1493" stroke-width="4"
                                     class="animated-circle circle-3" />
                             </svg>
                             <div class="circle-text">Balanced</div>
@@ -283,8 +284,8 @@
                     <div class="pursue-introduce fade-interactive fade">
                         <h2>'예술은 모두의 것'</h2>
                         <p>
-                            '아트팀 사각'은 2018년을 시작으로 창작 및 예술 활동 등, 지속적인 전시를 통해 시대에 맞는 메시지를 전합니다.<br>
-                            예술을 사랑한다면 나이, 전공, 직업 등 상관없이 지원 가능하며, 매년 새로운 기수들과 호흡을 맞춰나가고 있습니다.
+                            '아트팀 사각'은 2018년을 시작으로<br class="br-1024"> 창작 및 예술 활동 등, 지속적인 전시를 통해 시대에 맞는 메시지를 전합니다.<br>
+                            예술을 사랑한다면 나이, 전공, 직업 등 상관없이 지원 가능하며,<br class="br-1024"> 매년 새로운 기수들과 호흡을 맞춰나가고 있습니다.
                         </p>
                     </div>
                 </div>
@@ -312,7 +313,7 @@
                         </div>
                     </li>
                     <li class="value-contents growth">
-                        <div class="value-article fade-interactive fade to-left">
+                        <div class="value-article growth fade-interactive fade to-left">
                             <div class="value-article-title growth">
                                 <h2>Growth</h2>
                                 <p>Art as a path of continuous growth</p>
@@ -426,9 +427,9 @@
                                 <p>배출 작가</p>
                             </div>
                             <div class="count-circle">
-                                <svg width="270" height="270" viewBox="0 0 270 270" fill="none"
+                                <svg class="animated-circle-svg svg2" width="auto" height="100%" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
-                                    <circle cx="135" cy="135" r="132" stroke="#FF1493" stroke-width="50"
+                                    <circle cx="50%" cy="50%" r="49%" stroke="#FF1493" stroke-width="var(--svg2-stroke-width)"
                                         class="animated-circle circle-1 count" />
                                 </svg>
                                 <div class="circle-text count-artist"></div>
@@ -441,9 +442,9 @@
                                 <p>누적 작품 수</p>
                             </div>
                             <div class="count-circle">
-                                <svg width="270" height="270" viewBox="0 0 270 270" fill="none"
+                                <svg class="animated-circle-svg svg2" width="auto" height="100%" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
-                                    <circle cx="135" cy="135" r="132" stroke="#FF1493" stroke-width="50"
+                                    <circle cx="50%" cy="50%" r="49%" stroke="#FF1493" stroke-width="var(--svg2-stroke-width)"
                                         class="animated-circle circle-1 count" />
                                 </svg>
                                 <div class="circle-text count-artwork"></div>
@@ -456,9 +457,9 @@
                                 <p>누적 관람객</p>
                             </div>
                             <div class="count-circle">
-                                <svg width="270" height="270" viewBox="0 0 270 270" fill="none"
+                                <svg class="animated-circle-svg svg2" width="auto" height="100%" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
-                                    <circle cx="135" cy="135" r="132" stroke="#FF1493" stroke-width="50"
+                                    <circle cx="50%" cy="50%" r="49%" stroke="#FF1493" stroke-width="var(--svg2-stroke-width)"
                                         class="animated-circle circle-1 count" />
                                 </svg>
                                 <div class="circle-text count-visitor"></div>
@@ -467,26 +468,29 @@
                     </ul>
                     <div class="output-carousel">
                         <button class="prev-btn">
-                            <svg width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="16" height="28" viewBox="0 0 16 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <defs>
                                     <filter id="drop-shadow" x="-50%" y="-50%" width="200%" height="200%">
-                                      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="rgba(0, 0, 0, 0.5)" />
+                                        <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="rgba(0, 0, 0, 0.5)" />
                                     </filter>
                                 </defs>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.629312 12.2566L12.7837 -0.000187188L15.8218 3.06348L5.18641 13.7885L15.8218 24.5135L12.7837 27.5771L0.629311 15.3203C0.226518 14.914 0.000241034 14.363 0.000241084 13.7885C0.000241134 13.214 0.226519 12.663 0.629312 12.2566Z" fill="black" filter="url(#drop-shadow)"/>
-                                </svg>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0.629312 12.2566L12.7837 -0.000187188L15.8218 3.06348L5.18641 13.7885L15.8218 24.5135L12.7837 27.5771L0.629311 15.3203C0.226518 14.914 0.000241034 14.363 0.000241084 13.7885C0.000241134 13.214 0.226519 12.663 0.629312 12.2566Z"
+                                    fill="black" filter="url(#drop-shadow)" />
+                            </svg>
                         </button>
                         <button class="next-btn">
                             <svg width="16" height="28" viewBox="0 0 16 28" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <defs>
                                     <filter id="drop-shadow" x="-50%" y="-50%" width="200%" height="200%">
-                                      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="rgba(0, 0, 0, 0.5)" />
+                                        <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="rgba(0, 0, 0, 0.5)" />
                                     </filter>
                                 </defs>
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M15.1925 15.3205L3.03806 27.5773L0 24.5137L10.6354 13.7887L0 3.06367L3.03806 0L15.1925 12.2568C15.5953 12.6631 15.8215 13.2141 15.8215 13.7887C15.8215 14.3632 15.5953 14.9142 15.1925 15.3205Z"
-                                    fill="#fff" filter="url(#drop-shadow)"/>
+                                    fill="#fff" filter="url(#drop-shadow)" />
                             </svg>
                         </button>
 
@@ -508,7 +512,7 @@
                                     </figure>
                                     <div class="carousel-text">
                                         Vol.2 &lt;INSIDE AND OUTSIDE&gt;<br><span
-                                        class="output-date">2022.03.01-03.05</span>
+                                            class="output-date">2022.03.01-03.05</span>
                                     </div>
                                 </a>
                             </li>
@@ -529,7 +533,7 @@
                                     </figure>
                                     <div class="carousel-text">
                                         Vol.3 &lt;21세기; 전쟁 전염병 그리고 해방&gt;<br><span
-                                        class="output-date">2022.10.03-10.10</span>
+                                            class="output-date">2022.10.03-10.10</span>
                                     </div>
                                 </a>
                             </li>
@@ -549,7 +553,8 @@
                                         <img src="source/img/carousel_readroad.jpg" alt="마포구 레드로드 거리미술전" />
                                     </figure>
                                     <div class="carousel-text">
-                                        &lt;마포구 레드로드 거리미술전&gt; 단독 참여<br><span class="output-date">2023.05.13-05.14</span>
+                                        &lt;마포구 레드로드 거리미술전&gt; 단독 참여<br><span
+                                            class="output-date">2023.05.13-05.14</span>
                                     </div>
                                 </a>
                             </li>
@@ -660,6 +665,7 @@
     <script src="source/script/countUp.js"></script>
     <script src="source/script/carousel.js"></script>
     <script src="source/script/interactiveText.js"></script>
+    <script src="source/script/animatedCircleSize.js"></script>
 </body>
 
 </html>

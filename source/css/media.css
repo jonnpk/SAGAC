@@ -1,0 +1,131 @@
+@media (max-width: 1790px) {
+
+    .carousel-item {
+        flex: 1 0 50%;
+        /* 화면이 작아질 경우 2개 표시 */
+    }
+
+    .carousel-pic {
+        width: 100%;
+        /* 부모와 동일한 가로 크기 */
+        height: 580px;
+        /* 부모와 동일한 세로 크기 */
+
+    }
+}
+
+
+@media (max-width: 1400px) {
+
+    .carousel-item {
+        flex: 1 0 100%;
+        /* 더 작아지면 1개 표시 */
+    }
+}
+
+
+@media (max-width: 1320px) {
+
+    .value-contents {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .value-img {
+        max-width: 100%;
+    }
+
+    .value-img.growth {
+        order: -1;
+    }
+
+    .value-article {
+        align-self: flex-start;
+        gap: 40px;
+    }
+
+    .value-article.growth {
+        order: 1;
+        align-self: flex-end;
+    }
+
+    .hover-text {
+        font-size: 30px;
+        line-height: 44px;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .br-1024 {
+        display: block;
+    }
+
+    .pursue-circle-box {
+        height: 340px;
+    }
+
+    .count-circle {
+        height: 230px;
+    }
+
+    :root {
+        --svg1-size: 340;
+        --svg2-size: 230;
+        --svg2-stroke-width: 45;
+    }
+
+    .pursue-circle:nth-child(1) {
+        transform: translateX(-290px);
+    }
+
+    .pursue-circle:nth-child(3) {
+        transform: translateX(290px);
+    }
+
+    .circle-text {
+        font-size: 36px;
+    }
+
+    .practice-area {
+        row-gap: 50px;
+    }
+
+    .practice-area article {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 360px) {
+
+    #value-section,
+    #practice-section,
+    #output-section,
+    #weare-section {
+        padding: 100px 16px;
+    }
+
+    .logo-main,
+    .logo-main>svg {
+        width: 120px;
+    }
+
+    .hamburger,
+    .hamburger>svg {
+        width: 36px;
+    }
+
+    .section-title-img {
+        width: 328px;
+        height: 72px;
+        background-size: auto;
+    }
+
+    .flowing-text {
+        font-size: 32px;
+    }
+}
