@@ -314,15 +314,28 @@
         font-size: 16px;
     }
 
+    .dots {
+        margin-top: 0px;
+    }
+
+    #end-section {
+        padding-top: 80px;
+        padding-bottom: 36px;
+    }
+
+    .end-content-area {
+        gap: 100px;
+    }
+
     .logo-end {
         gap: 16px;
     }
-    
+
     .logo-end-rect {
         width: 230px;
         height: 230px;
     }
-    
+
     .logo-end-text {
         width: 240px;
     }
@@ -335,17 +348,18 @@
     .contact {
         gap: 16px;
     }
-    
+
     .contact h2 {
         font-size: 24px;
     }
-    
+
     .address p {
         font-size: 14px;
         line-height: 20px;
     }
 
     .copy {
+        margin-top: 24px;
         font-size: 12px;
     }
 }
