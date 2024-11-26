@@ -82,7 +82,7 @@ header {
 }
 
 .intro-video {
-    width: 60vw;
+    width: 90vw;
     max-width: 800px;
     height: auto;
     max-height: 800px;
@@ -96,6 +96,7 @@ header {
     overflow: hidden;
     white-space: nowrap;
     padding: 8px 0;
+    z-index: 10;
 }
 
 .flowing-text-area.end {
@@ -207,18 +208,16 @@ header {
     --svg1-size: 360;
     --svg2-size: 270;
      /* 기본 뷰박스 크기 */
+    --svg1-stroke-width: 3;
     --svg2-stroke-width: 50;
-     /* count-circle의 stroke-width 초기값 */
+     /* animate-circle의 stroke-width 초기값 */
 }
 
 .animated-circle {
-    stroke-dasharray: 1131;
-    /* 원 둘레: 2 * π * r (r=180) */
-    stroke-dashoffset: 1131;
-    /* 초기값: 원이 보이지 않음 */
+    stroke-dasharray: 1131; /* 원 둘레: 2 * π * r (r=180) */
+    stroke-dashoffset: 1131; /* 초기값: 원이 보이지 않음 */
     animation: draw 1.5s linear forwards;
-    transform: rotate(-90deg);
-    /* 시작 지점을 위쪽(12시 방향)으로 설정 */
+    transform: rotate(-90deg); /* 시작 지점을 위쪽(12시 방향)으로 설정 */
     transform-origin: center;
 }
 
@@ -757,5 +756,9 @@ header {
 }
 
 .br-1024 {
+    display: none;
+}
+
+.br-360 {
     display: none;
 }

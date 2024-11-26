@@ -1,7 +1,7 @@
 const counters = [
-    { selector: '.count-artist', time: 1.2, goal: 2 },
-    { selector: '.count-artwork', time: 1.5, goal: 181 },
-    { selector: '.count-visitor', time: 1.5, goal: 3270 },
+    { selector: '.count-artist', time: 1.5, goal: 2 },
+    { selector: '.count-artwork', time: 1.7, goal: 181 },
+    { selector: '.count-visitor', time: 1.7, goal: 3270 },
 ];
 
 const frame = 50;

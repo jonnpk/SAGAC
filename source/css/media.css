@@ -74,6 +74,7 @@
     :root {
         --svg1-size: 340;
         --svg2-size: 230;
+        --svg1-stroke-width: 2;
         --svg2-stroke-width: 45;
     }
 
@@ -102,6 +103,10 @@
 
 @media screen and (max-width: 360px) {
 
+    .br-360 {
+        display: block;
+    }
+
     #value-section,
     #practice-section,
     #output-section,
@@ -128,4 +133,185 @@
     .flowing-text {
         font-size: 32px;
     }
+
+    .pursue-circle-box {
+        height: 125px;
+    }
+
+    .count-circle {
+        height: 120px;
+    }
+
+    :root {
+        --svg1-size: 125;
+        --svg2-size: 120;
+        --svg1-stroke-width: 1;
+        --svg2-stroke-width: 28;
+    }
+
+    .pursue-circle:nth-child(1) {
+        transform: translateX(-100px);
+    }
+
+    .pursue-circle:nth-child(3) {
+        transform: translateX(100px);
+    }
+
+    .circle-text {
+        font-size: 14px;
+    }
+
+    .circle-text.count {
+        font-size: 16px;
+    }
+
+    .animated-circle {
+        stroke-dasharray: 392;
+        stroke-dashoffset: 392;
+    }
+
+    @keyframes draw {
+        from {
+            stroke-dashoffset: 392;
+        }
+
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    .flowing-text-area {
+        bottom: 2%;
+    }
+
+    .pursue-area {
+        gap: 64px;
+    }
+
+    .pursue-introduce {
+        gap: 16px;
+    }
+
+    .pursue-introduce h2 {
+        font-size: 18px;
+    }
+
+    .pursue-introduce p {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    .section-title.value,
+    .section-title.practice,
+    .section-title.output,
+    .section-title.weare {
+        margin-bottom: 80px;
+    }
+
+    .value-area {
+        gap: 64px;
+    }
+
+    .value-article {
+        gap: 16px;
+    }
+
+    .value-article-title {
+        gap: 8px;
+    }
+
+    .value-article-title h2 {
+        font-size: 24px;
+    }
+
+    .value-article-title p {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .value-article-text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .practice-area {
+        row-gap: 32px;
+    }
+
+    .practice-area article {
+        gap: 10px;
+    }
+
+    .practice-article-title-box {
+        padding: 0 2px;
+    }
+
+    .practice-article-title {
+        font-size: 24px;
+    }
+
+    .learn-more-btn {
+        font-size: 12px;
+        font-weight: 500;
+        border: 2px solid white;
+        border-radius: 40px;
+        padding: 8px 20px;
+        box-shadow: 1px 1px 14px rgba(255, 255, 255, 0.3);
+    }
+
+    .count-area {
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+    }
+
+    .count-img {
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+    }
+
+    .count-content {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 14px;
+    }
+
+    .count-type {
+        gap: 8px;
+        width: 100px;
+    }
+
+    .count-type h2 {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .count-type p {
+        font-size: 16px;
+    }
+
+    .count-circle {
+        height: 120px;
+    }
+
+    .circle-text {
+        font-size: 14px;
+    }
+
+    .carousel-pic {
+        height: 80%;
+    }
+
+    .prev-btn,
+    .next-btn {
+        top: 35%;
+    }
+
+    .carousel-text {
+        font-size: 16px;
+    }
+
 }

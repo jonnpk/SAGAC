@@ -9,7 +9,7 @@ document.querySelectorAll('.animated-circle-svg').forEach(svg => {
         variableName = '--svg2-size';
     }
 
-    // 변수 값 읽어서 viewBox 설정
+    // 변수 값 읽어서 viewBox와 stroke-dasharray 설정
     if (variableName) {
         const svgSize = rootStyles.getPropertyValue(variableName).trim();
         svg.setAttribute('viewBox', `0 0 ${svgSize} ${svgSize}`);
