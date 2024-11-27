@@ -123,6 +123,16 @@
 
 @media screen and (max-width: 866px) {
 
+    #value-section,
+    #practice-section,
+    #output-section,
+    #weare-section {
+        padding: 100px 16px;
+    }
+
+    header {
+        padding: 16px 16px;
+    }
 
     .animated-circle {
         stroke-dasharray: 785;
@@ -189,13 +199,6 @@
 
     .br-360 {
         display: block;
-    }
-
-    #value-section,
-    #practice-section,
-    #output-section,
-    #weare-section {
-        padding: 100px 16px;
     }
 
     .logo-main,
