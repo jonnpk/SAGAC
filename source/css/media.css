@@ -258,7 +258,7 @@
     }
 
     .end-content-area {
-        gap: 100px;
+        gap: 60px;
     }
 
     .logo-end {
@@ -421,7 +421,6 @@
     }
 
     .copy {
-        margin-top: 24px;
         font-size: 12px;
     }
 }
@@ -507,7 +506,6 @@
         font-size: 20px;
         line-height: 28px;
     }
-
 
     .circle-text.count {
         font-size: 20px;
@@ -614,15 +612,8 @@
         line-height: 20px;
     }
 
-    .section-title.value,
-    .section-title.practice,
-    .section-title.output,
-    .section-title.weare {
-        margin-bottom: 100px;
-    }
-
     .value-area {
-        gap: 64px;
+        gap: 150px;
     }
 
     .value-contents {

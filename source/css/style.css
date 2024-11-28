@@ -650,7 +650,7 @@ header {
 .end-content-area {
     display: flex;
     flex-direction: column;
-    gap: 150px;
+    gap: 80px;
     width: 100%;
     position: relative;
 }
@@ -728,9 +728,15 @@ header {
     color: #ffffffd2;
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
 .copy {
-    margin-top: 64px;
-    margin-bottom: 32px;
     font-size: 16px;
     font-weight: 600;
     color: #ffffffd2;
