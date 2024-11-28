@@ -130,8 +130,29 @@
         padding: 100px 16px;
     }
 
+    .section-title.value,
+    .section-title.practice,
+    .section-title.output,
+    .section-title.weare {
+        margin-bottom: 145px;
+    }
+
     header {
         padding: 16px 16px;
+    }
+
+    .logo-main,
+    .logo-main>svg {
+        width: 125px;
+    }
+
+    .hamburger,
+    .hamburger>svg {
+        width: 40px;
+    }
+
+    .flowing-text {
+        font-size: 40px;
     }
 
     .animated-circle {
@@ -161,7 +182,7 @@
         --svg1-size: 250;
         --svg2-size: 170;
         --svg1-stroke-width: 2;
-        --svg2-stroke-width: 30;
+        --svg2-stroke-width: 35;
     }
 
     .pursue-circle:nth-child(1) {
@@ -172,49 +193,367 @@
         transform: translateX(200px);
     }
 
-    .count-img {
-        width: 60px;
-        height: 60px;
+    .pursue-introduce h2 {
+        font-size: 24px;
+    }
+    
+    .pursue-introduce p {
+        font-size: 16px;
+        line-height: 24px;
     }
 
-    .count-type h2 {
-        font-size: 28px;
+    .value-contents {
+        gap: 24px;
     }
 
-    .count-type p {
-        font-size: 18px;
+    .value-article {
+        gap: 24px;
+    }
+
+    .value-article-title {
+        gap: 8px;
+    }
+    
+    .value-article-title h2 {
+        font-size: 32px;
+    }
+    
+    .value-article-title p {
+        font-size: 14px;
+    }
+    
+    .value-article-text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .practice-article-title {
+        font-size: 36px;
+    }
+
+    .learn-more-btn{
+        font-size: 14px;
+    }
+
+    .count-area {
+        flex-direction: column;
+        align-items: center;
+        gap: 56px;
+    }
+
+    .count-content {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 14px;
+    }
+
+    .count-type {
+        gap: 8px;
+        width: 120px;
     }
 
     .circle-text {
         font-size: 28px;
     }
 
-    .circle-text.count {
+    .end-content-area {
+        gap: 100px;
+    }
+
+    .logo-end {
+        gap: 20px;
+    }
+
+    .logo-end-rect {
+        width: 350px;
+        height: 350px;
+    }
+
+    .logo-end-text {
+        width: 360px;
+    }
+
+    .come-with-us {
         font-size: 32px;
+        gap: 4px;
+    }
+
+    .contact {
+        gap: 20px;
+    }
+
+    .contact h2 {
+        font-size: 32px;
+    }
+
+    .address p {
+        font-size: 16px;
+        line-height: 24px;
     }
 }
 
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 681px) {
 
-    .br-360 {
+    .pursue-circle-box {
+        height: 200px;
+    }
+    
+    :root {
+        --svg1-size: 200;
+        --svg1-stroke-width: 1;
+    }
+    
+    .pursue-circle:nth-child(1) {
+        transform: translateX(-170px);
+    }
+    
+    .pursue-circle:nth-child(3) {
+        transform: translateX(170px);
+    }
+
+    .animated-circle {
+        stroke-dasharray: 628;
+        stroke-dashoffset: 628;
+    }
+    
+    @keyframes draw {
+        from {
+            stroke-dashoffset: 628;
+        }
+    
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    .circle-text {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    
+    .section-title.value,
+    .section-title.practice,
+    .section-title.output,
+    .section-title.weare {
+        margin-bottom: 120px;
+    }
+
+    .pursue-circle-box {
+        height: 170px;
+    }
+    
+    :root {
+        --svg1-size: 170;
+        --svg1-stroke-width: 1;
+    }
+    
+    .pursue-circle:nth-child(1) {
+        transform: translateX(-140px);
+    }
+    
+    .pursue-circle:nth-child(3) {
+        transform: translateX(140px);
+    }
+
+    .circle-text {
+        font-size: 20px;
+    }
+
+    .pursue-area {
+        gap: 70px;
+    }
+
+    .pursue-introduce {
+        gap: 16px;
+    }
+
+    .pursue-introduce h2 {
+        font-size: 20px;
+    }
+
+    .pursue-introduce p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .hover-text {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    #end-section {
+        padding-top: 80px;
+        padding-bottom: 36px;
+    }
+
+    .logo-end {
+        gap: 16px;
+    }
+
+    .logo-end-rect {
+        width: 230px;
+        height: 230px;
+    }
+
+    .logo-end-text {
+        width: 240px;
+    }
+
+    .come-with-us {
+        font-size: 24px;
+    }
+
+    .contact {
+        gap: 16px;
+    }
+
+    .contact h2 {
+        font-size: 24px;
+    }
+
+    .address p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .copy {
+        margin-top: 24px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 487px) {
+    .pursue-circle-box {
+        height: 145px;
+    }
+
+    .count-circle {
+        height: 130px;
+    }
+    
+    :root {
+        --svg1-size: 145;
+        --svg2-size: 120;
+        --svg1-stroke-width: 1;
+        --svg2-stroke-width: 28;
+    }
+    
+    .pursue-circle:nth-child(1) {
+        transform: translateX(-120px);
+    }
+    
+    .pursue-circle:nth-child(3) {
+        transform: translateX(120px);
+    }
+
+    .animated-circle {
+        stroke-dasharray: 456;
+        stroke-dashoffset: 456;
+    }
+    
+    @keyframes draw {
+        from {
+            stroke-dashoffset: 456;
+        }
+    
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    .circle-text {
+        font-size: 18px;
+    }
+
+    .pursue-introduce {
+        gap: 16px;
+    }
+
+    .pursue-introduce h2 {
+        font-size: 18px;
+    }
+
+    .pursue-introduce p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .practice-area {
+        row-gap: 32px;
+    }
+
+    .practice-area article {
+        gap: 10px;
+    }
+
+    .practice-article-title {
+        font-size: 30px;
+    }
+
+    .learn-more-btn {
+        font-size: 12px;
+        font-weight: 500;
+        border: 2px solid white;
+        border-radius: 40px;
+        padding: 8px 20px;
+        box-shadow: 1px 1px 14px rgba(255, 255, 255, 0.3);
+    }
+
+    .hover-text {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+
+    .circle-text.count {
+        font-size: 20px;
+    }
+
+    .count-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .count-type {
+        gap: 8px;
+        width: 100px;
+    }
+
+    .count-type h2 {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .count-type p {
+        font-size: 16px;
+    }
+
+    .carousel-pic {
+        height: 80%;
+    }
+
+    .prev-btn,
+    .next-btn {
+        top: 35%;
+    }
+
+    .carousel-text {
+        font-size: 16px;
+    }
+
+    .dots {
+        margin-top: -28px;
+    }
+}
+
+@media screen and (max-width: 419px) {
+    
+    .br-419 {
         display: block;
-    }
-
-    .logo-main,
-    .logo-main>svg {
-        width: 120px;
-    }
-
-    .hamburger,
-    .hamburger>svg {
-        width: 36px;
-    }
-
-    .section-title-img {
-        width: 328px;
-        height: 72px;
-        background-size: auto;
     }
 
     .flowing-text {
@@ -227,9 +566,7 @@
 
     :root {
         --svg1-size: 125;
-        --svg2-size: 120;
         --svg1-stroke-width: 1;
-        --svg2-stroke-width: 28;
     }
 
     .pursue-circle:nth-child(1) {
@@ -242,10 +579,6 @@
 
     .circle-text {
         font-size: 14px;
-    }
-
-    .circle-text.count {
-        font-size: 16px;
     }
 
     .animated-circle {
@@ -263,12 +596,8 @@
         }
     }
 
-    .flowing-text-area {
-        bottom: 2%;
-    }
-
     .pursue-area {
-        gap: 64px;
+        gap: 50px;
     }
 
     .pursue-introduce {
@@ -289,11 +618,15 @@
     .section-title.practice,
     .section-title.output,
     .section-title.weare {
-        margin-bottom: 80px;
+        margin-bottom: 100px;
     }
 
     .value-area {
         gap: 64px;
+    }
+
+    .value-contents {
+        gap: 16px;
     }
 
     .value-article {
@@ -318,130 +651,20 @@
         line-height: 22px;
     }
 
-    .practice-area {
-        row-gap: 32px;
-    }
-
-    .practice-area article {
-        gap: 10px;
-    }
-
-    .practice-article-title-box {
-        padding: 0 2px;
-    }
-
     .practice-article-title {
         font-size: 24px;
     }
 
-    .learn-more-btn {
-        font-size: 12px;
-        font-weight: 500;
-        border: 2px solid white;
-        border-radius: 40px;
-        padding: 8px 20px;
-        box-shadow: 1px 1px 14px rgba(255, 255, 255, 0.3);
-    }
-
-    .count-area {
-        flex-direction: column;
-        align-items: center;
-        gap: 48px;
-    }
-
-    .count-img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .count-content {
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-evenly;
-        gap: 14px;
-    }
-
-    .count-type {
-        gap: 8px;
-        width: 100px;
-    }
-
-    .count-type h2 {
-        font-size: 24px;
-        font-weight: 600;
-    }
-
-    .count-type p {
-        font-size: 16px;
-    }
-
-    .count-circle {
-        height: 120px;
-    }
-
-    .circle-text {
-        font-size: 14px;
+    .hover-text {
+        font-size: 18px;
+        line-height: 24px;
     }
 
     .carousel-pic {
-        height: 80%;
-    }
-
-    .prev-btn,
-    .next-btn {
-        top: 35%;
-    }
-
-    .carousel-text {
-        font-size: 16px;
+        height: 70%;
     }
 
     .dots {
-        margin-top: 0px;
-    }
-
-    #end-section {
-        padding-top: 80px;
-        padding-bottom: 36px;
-    }
-
-    .end-content-area {
-        gap: 100px;
-    }
-
-    .logo-end {
-        gap: 16px;
-    }
-
-    .logo-end-rect {
-        width: 230px;
-        height: 230px;
-    }
-
-    .logo-end-text {
-        width: 240px;
-    }
-
-    .come-with-us {
-        font-size: 24px;
-        gap: 4px;
-    }
-
-    .contact {
-        gap: 16px;
-    }
-
-    .contact h2 {
-        font-size: 24px;
-    }
-
-    .address p {
-        font-size: 14px;
-        line-height: 20px;
-    }
-
-    .copy {
-        margin-top: 24px;
-        font-size: 12px;
+        margin-top: -90px;
     }
 }

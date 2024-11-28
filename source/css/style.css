@@ -154,6 +154,7 @@ header {
 
 .section-title-img {
     width: 100%;
+    max-width: 693px;
     height: auto;
     background-size: cover;
     background-repeat: no-repeat;
@@ -403,7 +404,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 16px;
 }
 
 .practice-article-title {
@@ -763,6 +763,6 @@ header {
     display: none;
 }
 
-.br-360 {
+.br-419 {
     display: none;
 }
