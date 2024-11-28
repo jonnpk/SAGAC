@@ -536,7 +536,7 @@
 
     .prev-btn,
     .next-btn {
-        top: 35%;
+        top: 40%;
     }
 
     .carousel-text {
@@ -610,10 +610,6 @@
         font-size: 12px;
         font-weight: 500;
         line-height: 20px;
-    }
-
-    .value-area {
-        gap: 150px;
     }
 
     .value-contents {

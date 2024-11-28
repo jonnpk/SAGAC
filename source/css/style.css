@@ -612,7 +612,7 @@ header {
 .prev-btn,
 .next-btn {
     position: absolute;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
     border: none;
     background: none;
