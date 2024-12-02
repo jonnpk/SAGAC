@@ -5,10 +5,10 @@ body {
 }
 
 #intro-section {
+    width: 100%;
     height: 100vh;
     box-sizing: border-box;
     overflow: hidden;
-    width: 100%;
 }
 
 #value-section,
@@ -86,11 +86,8 @@ header {
 }
 
 .intro-video {
-    width: 90vw;
-    max-width: 800px;
-    height: auto;
-    max-height: 800px;
-    object-fit: contain;
+    width: 100%;
+    height: 100vh;
 }
 
 .flowing-text-area {
