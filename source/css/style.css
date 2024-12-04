@@ -652,6 +652,11 @@ header {
     position: relative;
 }
 
+.end-content-area a {
+    text-decoration: none;
+    display: block;
+}
+
 .logo-end {
     display: flex;
     flex-direction: column;
