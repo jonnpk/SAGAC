@@ -175,6 +175,7 @@ header {
 }
 
 .pursue-area {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -283,6 +284,7 @@ header {
 }
 
 .pursue-introduce {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -767,7 +769,7 @@ footer {
     transform: none;
 }
 
-.br-1024 {
+.br-1044 {
     display: none;
 }
 

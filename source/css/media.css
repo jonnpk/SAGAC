@@ -56,12 +56,23 @@
     }
 }
 
+@media screen and (max-width: 1044px) {
 
-@media screen and (max-width: 1024px) {
-
-    .br-1024 {
+    .br-1044 {
         display: block;
     }
+
+    .pursue-introduce {
+        align-items:first baseline;
+    }
+
+    .pursue-introduce p {
+        text-align: left;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
 
     .flowing-text {
         font-size: 50px;
