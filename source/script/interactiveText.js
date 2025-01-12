@@ -10,7 +10,7 @@ window.addEventListener("scroll", () => {
             // 요소가 뷰포트 안에 있을 때 순차적으로 클래스 추가
             setTimeout(() => {
                 TextContent[i].classList.add("in");
-            }, i * 400); // 각 줄에 300ms씩 딜레이 추가
+            }, i * 400); // 각 줄에 400ms씩 딜레이 추가
         } else {
             // 요소가 뷰포트를 완전히 벗어났을 때 클래스 제거
             TextContent[i].classList.remove("in");

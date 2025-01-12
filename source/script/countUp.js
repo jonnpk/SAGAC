@@ -14,9 +14,9 @@ function easeInExpo(x) {
 function countUp(element, goal, time) {
     const totalFrame = time * frame;
     for (let i = 0; i <= totalFrame; i++) {
-        const 진행도 = i / totalFrame;
+        const prog = i / totalFrame;
         setTimeout(() => {
-            element.innerText = parseInt(goal * easeInExpo(진행도));
+            element.innerText = parseInt(goal * easeInExpo(prog));
         }, (i / frame) * 1000);
     }
 }
