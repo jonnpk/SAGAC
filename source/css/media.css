@@ -122,13 +122,9 @@
         font-size: 32px;
     }
 
-    .practice-area {
-        row-gap: 50px;
-    }
-
-    .practice-area article {
-        flex: 1 1 100%;
-        max-width: 100%;
+    .article-box {
+        flex-direction: column;
+        gap: 32px;
     }
 }
 
@@ -490,10 +486,6 @@
     .pursue-introduce p {
         font-size: 12px;
         line-height: 20px;
-    }
-
-    .practice-area {
-        row-gap: 32px;
     }
 
     .practice-area article {
